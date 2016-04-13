@@ -58,6 +58,7 @@ function delBtnHandle() {
 }
 
 function init() {
+    onclickevent
 
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
 
