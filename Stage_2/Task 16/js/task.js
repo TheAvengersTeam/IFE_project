@@ -58,9 +58,11 @@ function delBtnHandle() {
 }
 
 function init() {
-
-  // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-
+	<form>
+        <input name="添加" type="button" value="add-btn" onclick="addBtnHandle()"/> ;
+        <input name="删除" type="button" value="delete-btn" onclick="delBtnHandle()"/>
+    </form> 
+    // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
 
 }
