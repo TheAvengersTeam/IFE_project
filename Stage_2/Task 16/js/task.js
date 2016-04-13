@@ -34,9 +34,37 @@ function addAqiData()
 /**
  * 渲染aqi-table表格
  */
-function renderAqiList() {
-
+function renderAqiList(){
+    //定义表格	
+	var table=document.createElement('aqiTable');
+    table.setAttribute('style','width: 450px;');
+    //将标题添加进表格 
+    table.appendChild(caption);
+    //调用createTr()方法生成标题行并将其添加到table中。 
+    table.appendChild(createTr('城市','空气质量','操作')); 
+    //定义button
+    var btn = document.createElement("button"); 
+ 	btn.onclick = function(){ 
+ 		delBtnHandle(tr); 
+ 	} 
+ 	btn.innerHTML = "删除"; 
+    //for循环json对象,然后将循环到的对象通过createTr()方法生成行，添加到table中 
+    for(var i=0;i<data.length;i++){ 
+    table.appendChild(createTr(data[i].city,data[i].aircondition),btn); 
+    }  
+    document.getElementById("aqiTable").appendChild(tr);
 }
+
+    var createTr = function(city,aircondition,operate){
+        var tr=document.createElement('tr');
+        var tdCity=document.createElement('td'); 
+        tdCity.innerHTML = city; 
+        var tdAircondition= document.createElement('td'); 
+        tdAircondition.innerHTML = aircondition; 
+        tr.appendChild(tdCity); 
+        tr.appendChild(tdAircondition); 
+        return tr;      
+    }
 
 /**
  * 点击add-btn时的处理逻辑
@@ -51,16 +79,29 @@ function addBtnHandle() {
  * 点击各个删除按钮的时候的处理逻辑
  * 获取哪个城市数据被删，删除数据，更新表格显示
  */
-function delBtnHandle() {
+function delBtnHandle(strCity) {
   // do sth.
-
+  delete aqiData[strCity];       //删除掉获取到的城市的数据
   renderAqiList();
 }
 
 function init() {
 
+    var btn=document.getElementById("add-btn");
+   
+    btn.addEventListener("click",function(){
+       
+        addBtnHandler();
+   
+    },false);
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-
+    var btn=document.getElementById("del-btn");
+   
+    btn.addEventListener("click",function(){
+       
+        delBtnHandler();
+   
+    },false);
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
 
 }
