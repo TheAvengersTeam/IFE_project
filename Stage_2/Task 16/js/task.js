@@ -36,21 +36,25 @@ function addAqiData()
  */
 function renderAqiList(){
     //定义表格	
-	var table=document.createElement('aqiTable');
+//	var table=document.createElement('aqiTable');  表格已经存在，不用再次创建。
+	var table=document.getElementById('aqiTable'); //valentina
     table.setAttribute('style','width: 450px;');
-    //将标题添加进表格 
-    table.appendChild(caption);
+  
+  //将标题添加进表格
+ //   table.appendChild(caption);     //caption 哪里来的参数？
     //调用createTr()方法生成标题行并将其添加到table中。 
     table.appendChild(createTr('城市','空气质量','操作')); 
     //定义button
     var btn = document.createElement("button"); 
  	btn.onclick = function(){ 
- 		delBtnHandle(tr); 
+ 		delBtnHandle(tr);     //tr 参数何来？
  	} 
  	btn.innerHTML = "删除"; 
     //for循环json对象,然后将循环到的对象通过createTr()方法生成行，添加到table中 
     for(var i=0;i<data.length;i++){ 
-    table.appendChild(createTr(data[i].city,data[i].aircondition),btn); 
+    		table.appendChild(createTr(data[i].city,data[i].aircondition),btn); 
+    	//appendChild (node)这有一个参数，写的时候要查看文档。
+ 	//注意看 task.html; btn 是包含在<td></td>,所以要单独create 一个td来装载。
     }  
     document.getElementById("aqiTable").appendChild(tr);
 }
@@ -63,6 +67,7 @@ function renderAqiList(){
         tdAircondition.innerHTML = aircondition; 
         tr.appendChild(tdCity); 
         tr.appendChild(tdAircondition); 
+        // how about operate??    why not append it?
         return tr;      
     }
 
