@@ -43,40 +43,42 @@ function renderAqiList(){
     //定义表格	  
 	var table=document.getElementById('aqi-table'); //valentina 
     //清除所有的子节点 
-//  var childs = table.childNodes; 
-//  for(var i = childs.length - 1; i >= 0; i--) {  
-//  table.removeChild(childs[i]);  
-//} 
+    var childs = table.childNodes; 
+    for(var i = childs.length - 1; i >= 0; i--) {  
+    table.removeChild(childs[i]);  
+} 
 
     //标题行
-    if(!document.getElementById("title"))
+//  if(!document.getElementById("title"))
     document.getElementById("aqi-table").innerHTML = '<tr id="title"><td>城市</td><td>空气质量</td><td>操作</td></tr>';
 
-    //定义button 
-    var btn2 = document.createElement("button");  
-    btn2.setAttribute('id','del-btn');
- 	btn2.innerText = "删除";  
- 	
-    var tr1=document.createElement('tr'); 
-    var tdCity=document.createElement('td');  
-    var tdAircondition= document.createElement('td'); 
-    var tdOperate= document.createElement('td');   
-    var city,value;
+	var city,value;
     for(var p in aqiData){
     	city=p;
     	value=aqiData[p];
+    	initTr(city,value);
     }
-    if(!city || !value){
-    	return ;	
+    
+    function initTr(name,data){
+    	   //定义button 
+	    var btn2 = document.createElement("button");  
+	    btn2.setAttribute('id','del-btn');
+	 	btn2.innerText = "删除";  
+	 	
+	    var tr1=document.createElement('tr'); 
+	    var tdCity=document.createElement('td');  
+	    var tdAircondition= document.createElement('td'); 
+	    var tdOperate= document.createElement('td');   
+	    
+	    tdCity.innerText =name;//= document.getElementById("aqi-city-input").value;  
+	    tdAircondition.innerText=data;// = document.getElementById("aqi-value-input").value;  
+	    btn2.addEventListener('click',function(){delBtnHandle(name);});
+	    tdOperate.appendChild(btn2);
+	    tr1.appendChild(tdCity);  
+	    tr1.appendChild(tdAircondition);  
+	    tr1.appendChild(tdOperate);
+	    document.getElementById("aqi-table").appendChild(tr1); 
     }
-    tdCity.innerText =city;//= document.getElementById("aqi-city-input").value;  
-    tdAircondition.innerText=value;// = document.getElementById("aqi-value-input").value;  
-    btn2.addEventListener('click',function(){delBtnHandle(city);});
-    tdOperate.appendChild(btn2);
-    tr1.appendChild(tdCity);  
-    tr1.appendChild(tdAircondition);  
-    tr1.appendChild(tdOperate);
-    document.getElementById("aqi-table").appendChild(tr1); 
 } 
  
 /** 
@@ -109,4 +111,4 @@ function init() {
     }) 
 } 
 
-init(); 
+window.onload=init; 
