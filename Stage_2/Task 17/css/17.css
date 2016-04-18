@@ -1,0 +1,63 @@
+fieldset {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+select, select[size="0"], select[size="1"] {
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border: 1px solid;
+}
+keygen, select {
+    border-radius: 5px;
+}
+input, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+    -webkit-writing-mode: horizontal-tb;
+}
+ meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+.aqi-chart-wrap {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 5px #999999;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#title {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}

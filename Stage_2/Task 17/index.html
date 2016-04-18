@@ -1,0 +1,143 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .aqi-chart-wrap {
+      display: flex;
+      width: 90%;
+      height: 600px;
+      justify-content: center;
+      align-items: flex-end;
+      align-content: center;
+      margin: 10px auto;
+      padding: 10px;
+      border: 2px solid #000;
+    }
+    .aqi-chart-wrap div {
+      border: 1px solid #000;
+      flex: 1;
+    }
+    </style>
+  </head>
+<body>
+  <fieldset id="form-gra-time">
+    <legend>请选择日期粒度：</legend>
+    <label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+    <label>周<input name="gra-time" value="week" type="radio"></label>
+    <label>月<input name="gra-time" value="month" type="radio"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>请选择查看的城市：</legend>
+    <select id="city-select">
+      <option>北京</option>
+      <option>上海</option>
+      <option>广州</option>
+      <option>深圳</option>
+      <option>成都</option>
+      <option>西安</option>
+      <option>福州</option>
+      <option>厦门</option>
+      <option>沈阳</option>
+    </select>
+  </fieldset>
+
+  <div class="aqi-chart-wrap">
+  	<div title="2016-04-01:430" style="height:430px; background-color:rgb(193, 185, 194)"></div>
+  	<div title="2016-04-02:333" style="height:333px; background-color:rgb(150, 135, 194)"></div>
+  	<div title="2016-04-03:420" style="height:420px; background-color:rgb(193, 160, 194)"></div>
+  	<div title="2016-04-04:390" style="height:390px; background-color:rgb(193, 160, 180)"></div>
+  	<div title="2016-04-05:440" style="height:440px; background-color:rgb(19, 60, 80)"></div>
+  	<div title="2016-04-06:230" style="height:230px; background-color:rgb(90, 160, 180)"></div>
+  	<div title="2016-04-07:432" style="height:432px; background-color:rgb(93, 16, 180)"></div>
+  	<div title="2016-04-08:90" style="height:90px; background-color:rgb(100, 160, 180)"></div>
+  	<div title="2016-04-09:80" style="height:80px; background-color:rgb(93, 60, 80)"></div>
+  	<div title="2016-04-10:160" style="height:160px; background-color:rgb(193, 10, 80)"></div>
+  	<div title="2016-04-11:54" style="height:54px; background-color:rgb(60, 60, 180)"></div>
+  	<div title="2016-04-12:28" style="height:28px; background-color:rgb(193, 16, 80)"></div>
+  	<div title="2016-04-13:230" style="height:230px; background-color:rgb(13, 16, 18)"></div>
+  	<div title="2016-04-14:200" style="height:200px; background-color:rgb(198, 165, 108)"></div>
+  	<div title="2016-04-15:300" style="height:300px; background-color:rgb(13, 60, 18)"></div>
+    <div title="2016-04-16:250" style="height:250px; background-color:rgb(68, 164, 150)"></div>  	
+    <div title="2016-04-17:350" style="height:350px; background-color:rgb(15, 90, 180)"></div> 
+    <div title="2016-04-18:400" style="height:400px; background-color:rgb(193, 160, 180)"></div> 
+    <div title="2016-04-19:50" style="height:50px; background-color:rgb(15, 90, 180)"></div> 
+    <div title="2016-04-20:222" style="height:222px; background-color:rgb(198, 165, 108)"></div> 
+    <div title="2016-04-21:111" style="height:111px; background-color:rgb(193, 16, 80)"></div> 
+    <div title="2016-04-22:234" style="height:234px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-04-23:401" style="height:401px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-04-24:140" style="height:140px; background-color:rgb(193, 160, 194)"></div> 
+    <div title="2016-04-25:440" style="height:440px; background-color:rgb(193, 185, 194)"></div> 
+    <div title="2016-04-26:405" style="height:405px; background-color:rgb(234, 175, 194)"></div> 
+    <div title="2016-04-27:90" style="height:90px; background-color:rgb(255, 183, 194)"></div> 
+    <div title="2016-04-28:45" style="height:45px; background-color:rgb(3, 185, 194)"></div> 
+    <div title="2016-04-29:400" style="height:400px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-04-30:333" style="height:333px; background-color:rgb(193, 10, 80)"></div> 
+    <div title="2016-05-01:222" style="height:222px; background-color:rgb(193, 185, 194)"></div> 
+    <div title="2016-05-02:200" style="height:200px; background-color:rgb(193, 160, 194)"></div> 
+    <div title="2016-05-03:440" style="height:440px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-05-04:40" style="height:40px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-05-05:340" style="height:340px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-05-06:400" style="height:400px; background-color:rgb(193, 185, 194)"></div> 
+    <div title="2016-05-07:450" style="height:450px; background-color:rgb(193, 16, 80)"></div> 
+    <div title="2016-05-08:410" style="height:410px; background-color:rgb(25, 18, 194)"></div> 
+    <div title="2016-05-09:220" style="height:220px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-05-10:400" style="height:400px; background-color:rgb(241, 16, 80)"></div> 
+    <div title="2016-05-11:40" style="height:40px; background-color:rgb(193, 160, 194)"></div> 
+    <div title="2016-05-12:500" style="height:500px; background-color:rgb(19, 255, 80)"></div> 
+    <div title="2016-05-13:460" style="height:460px; background-color:rgb(13, 236, 80)"></div> 
+    <div title="2016-05-14:403" style="height:403px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-05-15:240" style="height:240px; background-color:rgb(255, 183, 194)"></div> 
+    <div title="2016-05-16:400" style="height:400px; background-color:rgb(193, 236, 80)"></div> 
+    <div title="2016-05-17:650" style="height:650px; background-color:rgb(255, 183, 194)"></div> 
+    <div title="2016-05-18:40" style="height:40px; background-color:rgb(193, 16, 80)"></div> 
+    <div title="2016-05-19:300" style="height:300px; background-color:rgb(193, 16, 236)"></div> 
+    <div title="2016-05-20:570" style="height:570px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-05-21:400" style="height:400px; background-color:rgb(236, 168, 80)"></div> 
+    <div title="2016-05-22:460" style="height:460px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-05-23:420" style="height:420px; background-color:rgb(193, 160, 194)"></div> 
+    <div title="2016-05-24:540" style="height:540px; background-color:rgb(233, 167, 86)"></div> 
+    <div title="2016-05-25:405" style="height:405px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-05-26:675" style="height:675px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-05-27:45" style="height:45px; background-color:rgb(163, 163, 80)"></div> 
+    <div title="2016-05-28:400" style="height:400px; background-color:rgb(193, 16, 80)"></div> 
+    <div title="2016-05-29:700" style="height:700px; background-color:rgb(25, 18, 194)"></div> 
+    <div title="2016-05-30:600" style="height:600px; background-color:rgb(193, 10, 80)"></div> 
+    <div title="2016-05-31:500" style="height:500px; background-color:rgb(255, 22, 194)"></div> 
+    <div title="2016-06-01:400" style="height:400px; background-color:rgb(25, 18, 194)"></div> 
+    <div title="2016-06-02:300" style="height:300px; background-color:rgb(193, 160, 194)"></div> 
+    <div title="2016-06-03:400" style="height:400px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-06-04:500" style="height:500px; background-color:rgb(143, 162, 80)"></div> 
+    <div title="2016-06-05:500" style="height:500px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-06-06:400" style="height:400px; background-color:rgb(193, 1, 8)"></div> 
+    <div title="2016-06-07:700" style="height:700px; background-color:rgb(13, 146, 180)"></div> 
+    <div title="2016-06-08:550" style="height:550px; background-color:rgb(149, 169, 90)"></div> 
+    <div title="2016-06-09:40" style="height:40px; background-color:rgb(19, 156, 80)"></div> 
+    <div title="2016-06-10:70" style="height:70px; background-color:rgb(255, 22, 194)"></div> 
+    <div title="2016-06-11:100" style="height:100px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-06-12:150" style="height:150px; background-color:rgb(193, 16, 80)"></div> 
+    <div title="2016-06-13:400" style="height:400px; background-color:rgb(255, 183, 194)"></div> 
+    <div title="2016-06-14:300" style="height:300px; background-color:rgb(193, 76, 80)"></div> 
+    <div title="2016-06-15:300" style="height:300px; background-color:rgb(13, 160, 194)"></div> 
+    <div title="2016-06-16:250" style="height:250px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-06-17:400" style="height:400px; background-color:rgb(93, 16, 18)"></div> 
+    <div title="2016-06-18:380" style="height:380px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-06-19:350" style="height:350px; background-color:rgb(25, 13, 14)"></div> 
+    <div title="2016-06-20:400" style="height:400px; background-color:rgb(55, 83, 94)"></div> 
+    <div title="2016-06-21:470" style="height:470px; background-color:rgb(255, 18, 19)"></div> 
+    <div title="2016-06-22:400" style="height:400px; background-color:rgb(25, 18, 194)"></div> 
+    <div title="2016-06-23:300" style="height:300px; background-color:rgb(193, 160, 194)"></div> 
+    <div title="2016-06-24:350" style="height:350px; background-color:rgb(193, 16, 80)"></div> 
+    <div title="2016-06-25:300" style="height:300px; background-color:rgb(50, 22, 194)"></div> 
+    <div title="2016-06-26:250" style="height:250px; background-color:rgb(255, 22, 194)"></div> 
+    <div title="2016-06-27:400" style="height:400px; background-color:rgb(255, 183, 194)"></div> 
+    <div title="2016-06-28:400" style="height:400px; background-color:rgb(93, 16, 180)"></div> 
+    <div title="2016-06-29:300" style="height:300px; background-color:rgb(13, 16, 18)"></div> 
+    <div title="2016-06-30:400" style="height:400px; background-color:rgb(193, 16, 80)"></div> 
+  	
+  </div>
+  <script src="js/17.js"></script>
+</body>
+</html>
